@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The bestest most amazing thing ever....v3</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    #easy1 {
+      color: rgb(170, 255, 0);
+      font-size: 47px;
+      display: flex;
+      justify-content: center;
+    }
+    #normal1 {
+      color: rgb(170, 255, 0);
+      font-size: 47px;
+      display: flex;
+      justify-content: center;
+    }
+    #hard1{
+      color: rgb(170, 255, 0);
+      font-size: 47px;
+      display: flex;
+      justify-content: center;
+    }
+    #outPut {
+      font-size: 100px;
+      height: 115px;
+    }
+    body {
+      background:black
+    }
+    #shell{
+      display: flex;
+      justify-content: center;
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 5px solid rgb(0, 195, 255);
+      width: 1000px;
+    }
+    .userInputcontainer{
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 300px;
+      height: 200px;
+    }
+     #scoreElm{
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      align-items: center;
+      color: rgb(0, 195, 255);
+      font-size: 100px;
+    }
+     #menu{
+      color: rgb(170, 255, 0);
+      font-size: 47px;
+  }
+    .diff{
+      font-size:47px;
+  }
+     #easy{
+    color: rgb(170, 255, 0);
+  }
+    #normal{
+    color:blue
+  }
+    #hard{
+    color:crimson
+  }
+    .tryagain{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+    #difError{
+      color: maroon;
+      font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #tacoTime{
+    font-size: 100px;
+    color: yellow;
+    
+  }
+  </style>
+</head>
+<body>
+  <div id="shell">
+    <div id="mainMenu" class="content">
+      <div id="MenuContainer"></div>
+      <div id="diff">
+        <h1 id="menu">Select Difficulty</h1>
+        <div>
+            <span class="diff" id="easy">Easy 0-20 </span>
+            <span class="diff" id="normal">Normal 0-50 </span> 
+            <span class="diff" id="hard">Hard 0-100 </span>
+        </div>
+        <div id="difError"></div> 
+      </div>
+      <div id="inputContainer">
+        <div id="buttons">
+          <button onclick="initGame()">Go</button>
+          <input id="seldif" type="text" placeholder="Choose Difficulty" autofocus />
+        </div>
+      </div>
+    </div>
+    <div id="game" class="content">
+      <div id="easy1">
+        Guess a number between 0 and 50
+      </div>
+      <div id="normal1">
+          Guess a number between 0 and 100
+        </div>
+        <div id="hard1">
+            Guess a number between 0 and 1000
+          </div>
+      <div id="outPut"></div>
+      <br/>
+      <div id="tacoTime">
+          <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/92/taco_1f32e.png" alt="Trulli" width="160" height="160">
+
+        <marquee scrollamount = "20">TACO TIME!!</marquee>
+        <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/92/taco_1f32e.png" alt="Trulli" width="160" height="160">
+      </div>
+      <div class="userInputcontainer">
+        <input id="box" type="text" placeholder="guess a number" autofocus />
+        <div class="tryagain" id="start">
+        <button onclick="run()">start</button>
+      </div>
+      <div class="tryagain" id="tryagain">
+          <button onclick="tryAgain()">Try Again</button>
+        </div>
+        <button onclick="resetNumber()">Restart</button>
+        <button onclick="menu()">Main Menu</button>
+        <div id="scoreElm"></div>
+       </div>
+    </div>
+  </div>
+  <script src="Acco.js"></script>
+</body>
+</html>
